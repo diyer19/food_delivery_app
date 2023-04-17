@@ -1,6 +1,6 @@
 {
   "unpublishedPage": {
-    "name": "Customer Sign Up ",
+    "name": "Customer_Sign_Up",
     "slug": "customer-sign-up",
     "layouts": [
       {
@@ -74,7 +74,7 @@
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
                       "borderColor": "#E0DEDE",
-                      "widgetName": "Form1",
+                      "widgetName": "sign_Up",
                       "isCanvas": true,
                       "displayName": "Form",
                       "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
@@ -1689,7 +1689,7 @@
         "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Customer Sign Up ",
+        "id": "Customer_Sign_Up",
         "deleted": false,
         "policies": [],
         "userPermissions": []
