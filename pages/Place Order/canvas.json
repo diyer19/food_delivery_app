@@ -178,10 +178,14 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "GREEN",
+                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `Vimbo`))(Order_restaurant.options, Order_restaurant.serverSideFiltering) }}",
                               "animateLoading": true,
                               "parentColumnSpace": 5.6590576171875,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
                               "leftColumn": 2,
                               "dynamicBindingPathList": [
                                 {
@@ -189,23 +193,16 @@
                                 },
                                 {
                                   "key": "borderRadius"
+                                },
+                                {
+                                  "key": "options"
+                                },
+                                {
+                                  "key": "defaultOptionValue"
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": [
-                                {
-                                  "label": "Blue",
-                                  "value": "BLUE"
-                                },
-                                {
-                                  "label": "Green",
-                                  "value": "GREEN"
-                                },
-                                {
-                                  "label": "Red",
-                                  "value": "RED"
-                                }
-                              ],
+                              "options": "{{get_restaurants.data}}",
                               "placeholderText": "Select option",
                               "isDisabled": false,
                               "key": "px65agpbbi",
@@ -228,11 +225,12 @@
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
                               "originalBottomRow": 19,
+                              "onOptionChange": "{{get_menu_items.run(() => get_menu_items.run(), () => {})}}",
                               "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "MultiSelect1",
+                              "widgetName": "menu_items",
                               "isFilterable": true,
                               "displayName": "MultiSelect",
                               "iconSVG": "/static/media/icon.a3495809ae48291a64404f3bb04b0e69.svg",
@@ -248,10 +246,7 @@
                               "type": "MULTI_SELECT_WIDGET_V2",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": [
-                                "GREEN",
-                                "RED"
-                              ],
+                              "defaultOptionValue": "",
                               "animateLoading": true,
                               "parentColumnSpace": 5.6590576171875,
                               "dynamicTriggerPathList": [],
@@ -262,23 +257,13 @@
                                 },
                                 {
                                   "key": "borderRadius"
+                                },
+                                {
+                                  "key": "options"
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": [
-                                {
-                                  "label": "Blue",
-                                  "value": "BLUE"
-                                },
-                                {
-                                  "label": "Green",
-                                  "value": "GREEN"
-                                },
-                                {
-                                  "label": "Red",
-                                  "value": "RED"
-                                }
-                              ],
+                              "options": "{{get_menu_items.data}}",
                               "placeholderText": "Select option(s)",
                               "isDisabled": false,
                               "key": "hrqnds1v2h",
@@ -304,7 +289,7 @@
                               "minDynamicHeight": 4
                             },
                             {
-                              "widgetName": "Text5",
+                              "widgetName": "total_text",
                               "displayName": "Text",
                               "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
                               "searchTags": [
@@ -541,7 +526,28 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Place Order_get_menu_items",
+              "name": "get_menu_items",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Order_restaurant.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Place Order_get_restaurants",
+              "name": "get_restaurants",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Place Order",
