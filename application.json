@@ -7,6 +7,10 @@
     {
       "id": "Place Order",
       "isDefault": false
+    },
+    {
+      "id": "Update_Info",
+      "isDefault": false
     }
   ],
   "viewMode": false,
