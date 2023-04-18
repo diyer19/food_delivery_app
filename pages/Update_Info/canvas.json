@@ -126,8 +126,8 @@
                                 "click",
                                 "submit"
                               ],
-                              "topRow": 138,
-                              "bottomRow": 142,
+                              "topRow": 139,
+                              "bottomRow": 143,
                               "type": "BUTTON_WIDGET",
                               "hideCard": false,
                               "animateLoading": true,
@@ -300,8 +300,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 124,
-                              "bottomRow": 131,
+                              "topRow": 125,
+                              "bottomRow": 132,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -415,8 +415,8 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 108,
-                              "bottomRow": 112,
+                              "topRow": 109,
+                              "bottomRow": 113,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -537,8 +537,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 131,
-                              "bottomRow": 138,
+                              "topRow": 132,
+                              "bottomRow": 139,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -659,8 +659,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 131,
-                              "bottomRow": 138,
+                              "topRow": 132,
+                              "bottomRow": 139,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -781,8 +781,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 131,
-                              "bottomRow": 138,
+                              "topRow": 132,
+                              "bottomRow": 139,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -1074,8 +1074,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 97,
-                              "bottomRow": 104,
+                              "topRow": 98,
+                              "bottomRow": 105,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -1085,7 +1085,7 @@
                               "parentColumnSpace": 5.6590576171875,
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
-                              "leftColumn": 41,
+                              "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
@@ -1102,7 +1102,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "isDeprecated": false,
-                              "rightColumn": 61,
+                              "rightColumn": 21,
                               "dynamicHeight": "FIXED",
                               "widgetId": "zv0d4b2slw",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1135,8 +1135,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 97,
-                              "bottomRow": 104,
+                              "topRow": 98,
+                              "bottomRow": 105,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -1146,7 +1146,7 @@
                               "parentColumnSpace": 5.6590576171875,
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
-                              "leftColumn": 1,
+                              "leftColumn": 24,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
@@ -1163,7 +1163,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "isDeprecated": false,
-                              "rightColumn": 21,
+                              "rightColumn": 44,
                               "dynamicHeight": "FIXED",
                               "widgetId": "o13yp28zwl",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -1300,6 +1300,7 @@
                               "resetFormOnClick": false,
                               "boxShadow": "none",
                               "widgetName": "putDeliveryAddress",
+                              "onClick": "{{update_delivery_address.run(() => update_delivery_address.run(), () => {})}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1314,7 +1315,11 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 16.770095825195312,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
@@ -1350,6 +1355,7 @@
                               "resetFormOnClick": false,
                               "boxShadow": "none",
                               "widgetName": "putDeliveryAddressCopy",
+                              "onClick": "{{update_payment_info.run(() => update_payment_info.run(), () => {})}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1357,14 +1363,18 @@
                                 "click",
                                 "submit"
                               ],
-                              "topRow": 104,
-                              "bottomRow": 108,
+                              "topRow": 105,
+                              "bottomRow": 109,
                               "parentRowSpace": 10,
                               "type": "BUTTON_WIDGET",
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 16.770095825195312,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
@@ -2081,7 +2091,7 @@
                               "borderColor": "#E0DEDE",
                               "isVisibleDownload": true,
                               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                              "topRow": 112,
+                              "topRow": 113,
                               "isSortable": true,
                               "type": "TABLE_WIDGET_V2",
                               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -2219,7 +2229,7 @@
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
-                              "bottomRow": 124,
+                              "bottomRow": 125,
                               "columnWidthMap": {
                                 "task": 245,
                                 "step": 70,
