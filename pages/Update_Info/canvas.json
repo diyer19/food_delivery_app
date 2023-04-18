@@ -74,7 +74,7 @@
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
                       "borderColor": "#E0DEDE",
-                      "widgetName": "sign_Up",
+                      "widgetName": "update_info",
                       "isCanvas": true,
                       "displayName": "Form",
                       "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
@@ -115,10 +115,10 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
-                              "resetFormOnClick": true,
+                              "resetFormOnClick": false,
                               "boxShadow": "none",
                               "widgetName": "put_customer",
-                              "onClick": "{{customerSignUp.run(() => customerSignUp.run(), () => {})}}",
+                              "onClick": "{{billingAddress.run(() => billingAddress.run(), () => {})}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
