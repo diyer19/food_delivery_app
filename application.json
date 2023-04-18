@@ -11,6 +11,18 @@
     {
       "id": "Update_Info",
       "isDefault": false
+    },
+    {
+      "id": "Restaurant_Sign_Up",
+      "isDefault": false
+    },
+    {
+      "id": "Menu_Item",
+      "isDefault": false
+    },
+    {
+      "id": "Update_Menu_Item",
+      "isDefault": false
     }
   ],
   "viewMode": false,
