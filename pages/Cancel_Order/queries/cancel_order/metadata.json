@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "customerSignUp",
+    "name": "cancel_order",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/c/new_customer"
+        "url": "web:4000/c/cancel_order"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Update_Menu_Item",
+    "pageId": "Cancel_Order",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,9 +29,9 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{update_menu.data}}",
+      "body": "{{cancelOrderForm.data}}",
       "bodyFormData": [],
-      "httpMethod": "POST",
+      "httpMethod": "DELETE",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -45,6 +45,9 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
+        "key": "datasourceUrl"
+      },
+      {
         "key": "body"
       }
     ],
@@ -52,14 +55,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "update_menu.data"
+      "cancelOrderForm.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Update_Menu_Item_customerSignUp",
+  "id": "Cancel_Order_cancel_order",
   "deleted": false,
-  "gitSyncId": "643c7123778c5f20f1c22b71_643f18bfc4ff7e399d810ec5"
+  "gitSyncId": "643b45882c9c4e3b78589afb_64401ea675a6cb6b70d25379"
 }
