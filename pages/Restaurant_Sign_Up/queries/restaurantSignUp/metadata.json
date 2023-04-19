@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "customerSignUp",
+    "name": "restaurantSignUp",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/c/new_customer"
+        "url": "web:4000/r/new_restaurant"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Menu_Item",
+    "pageId": "Restaurant_Sign_Up",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{new_menu_item.data}}",
+      "body": "{{sign_Up.data}}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -52,14 +52,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "new_menu_item.data"
+      "sign_Up.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Menu_Item_customerSignUp",
+  "id": "Restaurant_Sign_Up_restaurantSignUp",
   "deleted": false,
-  "gitSyncId": "643c7123778c5f20f1c22b71_643f171dc4ff7e399d810ebf"
+  "gitSyncId": "643c7123778c5f20f1c22b71_644019e10a1fe6530d8c2cc7"
 }
