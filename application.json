@@ -23,6 +23,10 @@
     {
       "id": "Update_Menu_Item",
       "isDefault": false
+    },
+    {
+      "id": "Cancel_Order",
+      "isDefault": false
     }
   ],
   "viewMode": false,
