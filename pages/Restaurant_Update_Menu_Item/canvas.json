@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Restaurant_Sign_Up",
-    "slug": "restaurant-sign-up",
+    "name": "Restaurant_Update_Menu_Item",
+    "slug": "restaurant-update-menu-item",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 610,
+          "bottomRow": 1292,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -39,7 +39,7 @@
                 "group"
               ],
               "topRow": 2,
-              "bottomRow": 61,
+              "bottomRow": 117,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
@@ -61,7 +61,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 590,
+                  "bottomRow": 1150,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -74,7 +74,7 @@
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
                       "borderColor": "#E0DEDE",
-                      "widgetName": "sign_Up",
+                      "widgetName": "update_menu",
                       "isCanvas": true,
                       "displayName": "Form",
                       "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
@@ -82,7 +82,7 @@
                         "group"
                       ],
                       "topRow": 1,
-                      "bottomRow": 54,
+                      "bottomRow": 74,
                       "parentRowSpace": 10,
                       "type": "FORM_WIDGET",
                       "hideCard": false,
@@ -104,7 +104,7 @@
                           "widgetName": "Canvas2",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 530,
+                          "bottomRow": 730,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -115,10 +115,74 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
+                              "boxShadow": "none",
+                              "widgetName": "restaurant_name1",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                              "labelText": "Select your restaurant:",
+                              "searchTags": [
+                                "dropdown"
+                              ],
+                              "topRow": 6,
+                              "bottomRow": 13,
+                              "parentRowSpace": 10,
+                              "labelWidth": 5,
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 5.6590576171875,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "options"
+                                }
+                              ],
+                              "labelPosition": "Top",
+                              "options": "{{restaurant_name.data}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "px65agpbbi",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "isDeprecated": false,
+                              "rightColumn": 56,
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "d00o0icmp9",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "minWidth": 450,
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "cclxj1lftw",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "responsiveBehavior": "fill",
+                              "originalTopRow": 20,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 27,
+                              "onOptionChange": "{{restaurant_name.run(() => restaurant_name.run(), () => {})}}",
+                              "minDynamicHeight": 4
+                            },
+                            {
                               "resetFormOnClick": true,
                               "boxShadow": "none",
-                              "widgetName": "post_restaurant",
-                              "onClick": "{{restaurantSignUp.run(() => restaurantSignUp.run(), () => {})}}",
+                              "widgetName": "update_item",
+                              "onClick": "{{update_menu_item.run(() => update_menu_item.run(), () => {})}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -126,8 +190,8 @@
                                 "click",
                                 "submit"
                               ],
-                              "topRow": 43,
-                              "bottomRow": 47,
+                              "topRow": 62,
+                              "bottomRow": 66,
                               "type": "BUTTON_WIDGET",
                               "hideCard": false,
                               "animateLoading": true,
@@ -136,7 +200,7 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 16,
+                              "leftColumn": 17,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "buttonColor"
@@ -145,11 +209,11 @@
                                   "key": "borderRadius"
                                 }
                               ],
-                              "text": "Submit",
+                              "text": "Update",
                               "isDisabled": false,
                               "key": "76d8065let",
                               "isDeprecated": false,
-                              "rightColumn": 45,
+                              "rightColumn": 46,
                               "isDefaultClickDisabled": true,
                               "widgetId": "tb1cbw4y9x",
                               "minWidth": 120,
@@ -160,140 +224,16 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "responsiveBehavior": "hug",
-                              "originalTopRow": 96,
+                              "originalTopRow": 62,
                               "disabledWhenInvalid": true,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "originalBottomRow": 100,
+                              "originalBottomRow": 66,
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
                             },
                             {
                               "boxShadow": "none",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "topRow": 7,
-                              "labelWidth": 5,
-                              "type": "INPUT_WIDGET_V2",
-                              "animateLoading": true,
-                              "resetOnSubmit": true,
-                              "leftColumn": 1,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                }
-                              ],
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "maxChars": "50",
-                              "isDisabled": false,
-                              "isRequired": false,
-                              "dynamicHeight": "FIXED",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "showStepArrows": false,
-                              "isVisible": true,
-                              "version": 2,
-                              "isLoading": false,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "originalBottomRow": 14,
-                              "widgetName": "restaurant_name",
-                              "displayName": "Input",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "bottomRow": 14,
-                              "parentRowSpace": 10,
-                              "autoFocus": false,
-                              "hideCard": false,
-                              "parentColumnSpace": 4.8802642822265625,
-                              "dynamicTriggerPathList": [],
-                              "labelPosition": "Top",
-                              "key": "mpd01i3kci",
-                              "labelTextSize": "0.875rem",
-                              "isDeprecated": false,
-                              "rightColumn": 31,
-                              "widgetId": "jaur6mmuoz",
-                              "minWidth": 450,
-                              "label": "Restaurant Name",
-                              "parentId": "cclxj1lftw",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "responsiveBehavior": "fill",
-                              "originalTopRow": 7,
-                              "maxDynamicHeight": 9000,
-                              "iconAlign": "left",
-                              "defaultText": "",
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "none",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "topRow": 7,
-                              "labelWidth": 5,
-                              "type": "INPUT_WIDGET_V2",
-                              "animateLoading": true,
-                              "resetOnSubmit": true,
-                              "leftColumn": 33,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                }
-                              ],
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "maxChars": "50",
-                              "isDisabled": false,
-                              "isRequired": false,
-                              "dynamicHeight": "FIXED",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "showStepArrows": false,
-                              "isVisible": true,
-                              "version": 2,
-                              "isLoading": false,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "originalBottomRow": 14,
-                              "widgetName": "restaurant_phone",
-                              "displayName": "Input",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "bottomRow": 14,
-                              "parentRowSpace": 10,
-                              "autoFocus": false,
-                              "hideCard": false,
-                              "parentColumnSpace": 4.8802642822265625,
-                              "dynamicTriggerPathList": [],
-                              "labelPosition": "Top",
-                              "key": "mpd01i3kci",
-                              "labelTextSize": "0.875rem",
-                              "isDeprecated": false,
-                              "rightColumn": 63,
-                              "widgetId": "3l26hzwg64",
-                              "minWidth": 450,
-                              "label": "Phone",
-                              "parentId": "cclxj1lftw",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "responsiveBehavior": "fill",
-                              "originalTopRow": 7,
-                              "maxDynamicHeight": 9000,
-                              "iconAlign": "left",
-                              "defaultText": "",
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "none",
-                              "widgetName": "restaurant_street",
+                              "widgetName": "item_name",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                               "searchTags": [
@@ -302,8 +242,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 23,
-                              "bottomRow": 30,
+                              "topRow": 41,
+                              "bottomRow": 48,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -330,14 +270,14 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "isDeprecated": false,
-                              "rightColumn": 61,
+                              "rightColumn": 43,
                               "dynamicHeight": "FIXED",
                               "widgetId": "z30jnyfacj",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "showStepArrows": false,
                               "minWidth": 450,
                               "isVisible": true,
-                              "label": "Street\n",
+                              "label": "Item Name\n",
                               "version": 2,
                               "parentId": "cclxj1lftw",
                               "labelAlignment": "left",
@@ -361,8 +301,8 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 16,
-                              "bottomRow": 20,
+                              "topRow": 19,
+                              "bottomRow": 23,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -385,7 +325,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "Restaurant Address",
+                              "text": "Menu Item",
                               "key": "tqpixly5hr",
                               "isDeprecated": false,
                               "rightColumn": 17,
@@ -409,8 +349,64 @@
                               "minDynamicHeight": 4
                             },
                             {
+                              "widgetName": "Text2Copy",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                              "searchTags": [
+                                "typography",
+                                "paragraph",
+                                "label"
+                              ],
+                              "topRow": 37,
+                              "bottomRow": 41,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 4.8802642822265625,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "truncateButtonColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "text": "Update Item",
+                              "key": "tqpixly5hr",
+                              "isDeprecated": false,
+                              "rightColumn": 17,
+                              "textAlign": "LEFT",
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "ni14k8fzlw",
+                              "minWidth": 450,
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "cclxj1lftw",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "responsiveBehavior": "fill",
+                              "originalTopRow": 28,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 32,
+                              "fontSize": "1rem",
+                              "minDynamicHeight": 4
+                            },
+                            {
                               "boxShadow": "none",
-                              "widgetName": "restaurant_city",
+                              "widgetName": "item_description",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                               "searchTags": [
@@ -419,8 +415,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 32,
-                              "bottomRow": 39,
+                              "topRow": 48,
+                              "bottomRow": 58,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -441,152 +437,91 @@
                               ],
                               "labelPosition": "Top",
                               "labelStyle": "",
-                              "inputType": "TEXT",
-                              "isDisabled": false,
-                              "key": "mpd01i3kci",
-                              "labelTextSize": "0.875rem",
-                              "isRequired": false,
-                              "isDeprecated": false,
-                              "rightColumn": 28,
-                              "dynamicHeight": "FIXED",
-                              "widgetId": "jkv0mmktc8",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "showStepArrows": false,
-                              "minWidth": 450,
-                              "isVisible": true,
-                              "label": "City\n",
-                              "version": 2,
-                              "parentId": "cclxj1lftw",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "responsiveBehavior": "fill",
-                              "originalTopRow": 39,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "maxDynamicHeight": 9000,
-                              "originalBottomRow": 46,
-                              "iconAlign": "left",
-                              "defaultText": "",
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "none",
-                              "widgetName": "restaurant_state",
-                              "displayName": "Input",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "topRow": 32,
-                              "bottomRow": 39,
-                              "parentRowSpace": 10,
-                              "labelWidth": 5,
-                              "autoFocus": false,
-                              "type": "INPUT_WIDGET_V2",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "parentColumnSpace": 4.8802642822265625,
-                              "dynamicTriggerPathList": [],
-                              "resetOnSubmit": true,
-                              "leftColumn": 28,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                }
-                              ],
-                              "labelPosition": "Top",
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "isDisabled": false,
-                              "key": "mpd01i3kci",
-                              "labelTextSize": "0.875rem",
-                              "isRequired": false,
-                              "isDeprecated": false,
-                              "rightColumn": 44,
-                              "dynamicHeight": "FIXED",
-                              "widgetId": "95ltkl4whf",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "showStepArrows": false,
-                              "minWidth": 450,
-                              "isVisible": true,
-                              "label": "State",
-                              "version": 2,
-                              "parentId": "cclxj1lftw",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "responsiveBehavior": "fill",
-                              "originalTopRow": 39,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "maxDynamicHeight": 9000,
-                              "originalBottomRow": 46,
-                              "iconAlign": "left",
-                              "defaultText": "",
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "none",
-                              "widgetName": "restaurant_zip",
-                              "displayName": "Input",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "topRow": 32,
-                              "bottomRow": 39,
-                              "parentRowSpace": 10,
-                              "labelWidth": 5,
-                              "autoFocus": false,
-                              "type": "INPUT_WIDGET_V2",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "parentColumnSpace": 4.8802642822265625,
-                              "dynamicTriggerPathList": [],
-                              "resetOnSubmit": true,
-                              "leftColumn": 44,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                }
-                              ],
-                              "labelPosition": "Top",
-                              "labelStyle": "",
-                              "inputType": "NUMBER",
+                              "inputType": "MULTI_LINE_TEXT",
                               "isDisabled": false,
                               "key": "mpd01i3kci",
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "isDeprecated": false,
                               "rightColumn": 61,
-                              "dynamicHeight": "FIXED",
-                              "widgetId": "g9erlnx08f",
+                              "dynamicHeight": "AUTO_HEIGHT",
+                              "widgetId": "jkv0mmktc8",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "showStepArrows": false,
                               "minWidth": 450,
                               "isVisible": true,
-                              "label": "Zip",
+                              "label": "Description\n\n",
                               "version": 2,
                               "parentId": "cclxj1lftw",
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "responsiveBehavior": "fill",
-                              "originalTopRow": 39,
+                              "originalTopRow": 48,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 46,
+                              "originalBottomRow": 58,
+                              "iconAlign": "left",
+                              "defaultText": "",
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "item_price",
+                              "displayName": "Input",
+                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+                              "searchTags": [
+                                "form",
+                                "text input",
+                                "number",
+                                "textarea"
+                              ],
+                              "topRow": 41,
+                              "bottomRow": 48,
+                              "parentRowSpace": 10,
+                              "labelWidth": 5,
+                              "autoFocus": false,
+                              "type": "INPUT_WIDGET_V2",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 4.8802642822265625,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 45,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "labelPosition": "Top",
+                              "labelStyle": "",
+                              "inputType": "TEXT",
+                              "isDisabled": false,
+                              "key": "mpd01i3kci",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "isDeprecated": false,
+                              "rightColumn": 62,
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "g9erlnx08f",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "showStepArrows": false,
+                              "minWidth": 450,
+                              "isVisible": true,
+                              "label": "Price",
+                              "version": 2,
+                              "parentId": "cclxj1lftw",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "responsiveBehavior": "fill",
+                              "originalTopRow": 48,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 55,
                               "iconAlign": "left",
                               "defaultText": "",
                               "minDynamicHeight": 4
@@ -622,7 +557,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "Create New Restaurant",
+                              "text": "Update Menu Item",
                               "key": "tqpixly5hr",
                               "isDeprecated": false,
                               "rightColumn": 25,
@@ -643,6 +578,68 @@
                               "maxDynamicHeight": 9000,
                               "originalBottomRow": 5,
                               "fontSize": "1.25rem",
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "select_menu_item",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                              "labelText": "Select Menu Item",
+                              "searchTags": [
+                                "dropdown"
+                              ],
+                              "topRow": 24,
+                              "bottomRow": 31,
+                              "parentRowSpace": 10,
+                              "labelWidth": 5,
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 17.92022705078125,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "options"
+                                }
+                              ],
+                              "labelPosition": "Top",
+                              "options": "{{get_Menu_Items.data}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "0ccfyirbpk",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "isDeprecated": false,
+                              "rightColumn": 21,
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "ma3malvcnx",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "minWidth": 450,
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "cclxj1lftw",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "responsiveBehavior": "fill",
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "onOptionChange": "{{get_Menu_Items.run(() => get_Menu_Items.run(), () => {})}}",
                               "minDynamicHeight": 4
                             }
                           ],
@@ -979,10 +976,31 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Restaurant_Update_Menu_Item_get_Menu_Items",
+              "name": "get_Menu_Items",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "restaurant_name1.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Restaurant_Update_Menu_Item_restaurant_name",
+              "name": "restaurant_name",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Restaurant_Sign_Up",
+        "id": "Restaurant_Update_Menu_Item",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -993,5 +1011,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "643c7123778c5f20f1c22b71_643f160bc4ff7e399d810eb7"
+  "gitSyncId": "643c7123778c5f20f1c22b71_643f18bfc4ff7e399d810ec3"
 }

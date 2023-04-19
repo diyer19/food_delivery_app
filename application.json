@@ -5,11 +5,11 @@
       "isDefault": true
     },
     {
-      "id": "Place_Order",
+      "id": "Customer_Place_Order",
       "isDefault": false
     },
     {
-      "id": "Update_Info",
+      "id": "Customer_Update_Info",
       "isDefault": false
     },
     {
@@ -17,15 +17,19 @@
       "isDefault": false
     },
     {
-      "id": "Menu_Item",
+      "id": "Restaurant_Menu_Item",
       "isDefault": false
     },
     {
-      "id": "Update_Menu_Item",
+      "id": "Restaurant_Update_Menu_Item",
       "isDefault": false
     },
     {
-      "id": "Cancel_Order",
+      "id": "Customer_Cancel_Order",
+      "isDefault": false
+    },
+    {
+      "id": "Page1",
       "isDefault": false
     }
   ],
