@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_orders",
+    "name": "get_total_earnings",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/r/orders/{{restaurant_name2.selectedOptionValue}}"
+        "url": "web:4000/r/restaurant_earnings/{{restaurant_name2.selectedOptionValue}}"
       },
       "invalids": [],
       "messages": [],
@@ -53,7 +53,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Restaurant_getOrders_get_orders",
+  "id": "Restaurant_getOrders_get_total_earnings",
   "deleted": false,
-  "gitSyncId": "643b45882c9c4e3b78589afb_6440492875a6cb6b70d253fa"
+  "gitSyncId": "643b45882c9c4e3b78589afb_64405f8775a6cb6b70d25418"
 }

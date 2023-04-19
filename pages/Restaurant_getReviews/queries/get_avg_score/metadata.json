@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_orders",
+    "name": "get_avg_score",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/r/orders/{{restaurant_name2.selectedOptionValue}}"
+        "url": "web:4000/r/avg_score/{{restaurant_name2.selectedOptionValue}}"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Restaurant_getOrders",
+    "pageId": "Restaurant_getReviews",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -53,7 +53,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Restaurant_getOrders_get_orders",
+  "id": "Restaurant_getReviews_get_avg_score",
   "deleted": false,
-  "gitSyncId": "643b45882c9c4e3b78589afb_6440492875a6cb6b70d253fa"
+  "gitSyncId": "643b45882c9c4e3b78589afb_6440630e75a6cb6b70d2541c"
 }
