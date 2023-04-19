@@ -17,10 +17,6 @@
       "isDefault": false
     },
     {
-      "id": "Restaurant_Menu_Item",
-      "isDefault": false
-    },
-    {
       "id": "Restaurant_Update_Menu_Item",
       "isDefault": false
     },
@@ -29,7 +25,7 @@
       "isDefault": false
     },
     {
-      "id": "Page1",
+      "id": "Restaurant_Delete",
       "isDefault": false
     }
   ],

@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1292,
+          "bottomRow": 1170,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -175,7 +175,7 @@
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
                               "originalBottomRow": 27,
-                              "onOptionChange": "{{restaurant_name.run(() => restaurant_name.run(), () => {})}}",
+                              "onOptionChange": "{{restaurant_name.run(() => get_Menu_Items.run(), () => {})}}",
                               "minDynamicHeight": 4
                             },
                             {

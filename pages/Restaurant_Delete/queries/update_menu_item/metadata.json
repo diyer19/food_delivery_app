@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "newMenuItem",
+    "name": "update_menu_item",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/r/new_menu_item/"
+        "url": "web:4000/r/restaurant/{{restaurant_name1.selectedOptionValue}}/{{select_menu_item.selectedOptionValue}}"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Restaurant_Menu_Item",
+    "pageId": "Restaurant_Delete",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,9 +29,9 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{new_menu_item.data}}",
+      "body": "{{update_menu.data}}",
       "bodyFormData": [],
-      "httpMethod": "POST",
+      "httpMethod": "PUT",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -45,6 +45,9 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
+        "key": "datasourceUrl"
+      },
+      {
         "key": "body"
       }
     ],
@@ -52,14 +55,16 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "new_menu_item.data"
+      "restaurant_name1.selectedOptionValue",
+      "select_menu_item.selectedOptionValue",
+      "update_menu.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Restaurant_Menu_Item_newMenuItem",
+  "id": "Restaurant_Delete_update_menu_item",
   "deleted": false,
-  "gitSyncId": "643c7123778c5f20f1c22b71_64401c2d0a1fe6530d8c2ccb"
+  "gitSyncId": "643b45882c9c4e3b78589afb_6440424275a6cb6b70d253e9"
 }
