@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1170,
+          "bottomRow": 1292,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -74,7 +74,7 @@
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
                       "borderColor": "#E0DEDE",
-                      "widgetName": "sign_Up",
+                      "widgetName": "update_menu",
                       "isCanvas": true,
                       "displayName": "Form",
                       "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
@@ -114,6 +114,73 @@
                           "leftColumn": 0,
                           "dynamicBindingPathList": [],
                           "children": [
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "menu_item_restaurant",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                              "labelText": "Select your restaurant:",
+                              "searchTags": [
+                                "dropdown"
+                              ],
+                              "topRow": 8,
+                              "bottomRow": 15,
+                              "parentRowSpace": 10,
+                              "labelWidth": 5,
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `Fliptune`))(menu_item_restaurant.options, menu_item_restaurant.serverSideFiltering) }}",
+                              "animateLoading": true,
+                              "parentColumnSpace": 5.6590576171875,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "options"
+                                },
+                                {
+                                  "key": "defaultOptionValue"
+                                }
+                              ],
+                              "labelPosition": "Top",
+                              "options": "{{get_restaurants.data}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "px65agpbbi",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "isDeprecated": false,
+                              "rightColumn": 56,
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "d00o0icmp9",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "minWidth": 450,
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "cclxj1lftw",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "responsiveBehavior": "fill",
+                              "originalTopRow": 20,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "originalBottomRow": 27,
+                              "onOptionChange": "{{restaurant_name.run(() => restaurant_name.run(), () => {})}}",
+                              "minDynamicHeight": 4
+                            },
                             {
                               "resetFormOnClick": true,
                               "boxShadow": "none",
@@ -169,130 +236,6 @@
                             },
                             {
                               "boxShadow": "none",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "topRow": 7,
-                              "labelWidth": 5,
-                              "type": "INPUT_WIDGET_V2",
-                              "animateLoading": true,
-                              "resetOnSubmit": true,
-                              "leftColumn": 1,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                }
-                              ],
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "maxChars": "50",
-                              "isDisabled": false,
-                              "isRequired": false,
-                              "dynamicHeight": "FIXED",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "showStepArrows": false,
-                              "isVisible": true,
-                              "version": 2,
-                              "isLoading": false,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "originalBottomRow": 14,
-                              "widgetName": "restaurant_name",
-                              "displayName": "Input",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "bottomRow": 14,
-                              "parentRowSpace": 10,
-                              "autoFocus": false,
-                              "hideCard": false,
-                              "parentColumnSpace": 4.8802642822265625,
-                              "dynamicTriggerPathList": [],
-                              "labelPosition": "Top",
-                              "key": "mpd01i3kci",
-                              "labelTextSize": "0.875rem",
-                              "isDeprecated": false,
-                              "rightColumn": 31,
-                              "widgetId": "jaur6mmuoz",
-                              "minWidth": 450,
-                              "label": "Restaurant Name",
-                              "parentId": "cclxj1lftw",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "responsiveBehavior": "fill",
-                              "originalTopRow": 7,
-                              "maxDynamicHeight": 9000,
-                              "iconAlign": "left",
-                              "defaultText": "",
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "none",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "topRow": 7,
-                              "labelWidth": 5,
-                              "type": "INPUT_WIDGET_V2",
-                              "animateLoading": true,
-                              "resetOnSubmit": true,
-                              "leftColumn": 33,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                }
-                              ],
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "maxChars": "50",
-                              "isDisabled": false,
-                              "isRequired": false,
-                              "dynamicHeight": "FIXED",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "showStepArrows": false,
-                              "isVisible": true,
-                              "version": 2,
-                              "isLoading": false,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "originalBottomRow": 14,
-                              "widgetName": "restaurant_phone",
-                              "displayName": "Input",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "bottomRow": 14,
-                              "parentRowSpace": 10,
-                              "autoFocus": false,
-                              "hideCard": false,
-                              "parentColumnSpace": 4.8802642822265625,
-                              "dynamicTriggerPathList": [],
-                              "labelPosition": "Top",
-                              "key": "mpd01i3kci",
-                              "labelTextSize": "0.875rem",
-                              "isDeprecated": false,
-                              "rightColumn": 63,
-                              "widgetId": "3l26hzwg64",
-                              "minWidth": 450,
-                              "label": "Phone",
-                              "parentId": "cclxj1lftw",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "responsiveBehavior": "fill",
-                              "originalTopRow": 7,
-                              "maxDynamicHeight": 9000,
-                              "iconAlign": "left",
-                              "defaultText": "",
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "none",
                               "widgetName": "item_name",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
@@ -302,8 +245,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 36,
-                              "bottomRow": 43,
+                              "topRow": 41,
+                              "bottomRow": 48,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -361,8 +304,8 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 17,
-                              "bottomRow": 21,
+                              "topRow": 19,
+                              "bottomRow": 23,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -417,8 +360,8 @@
                                 "paragraph",
                                 "label"
                               ],
-                              "topRow": 31,
-                              "bottomRow": 35,
+                              "topRow": 37,
+                              "bottomRow": 41,
                               "parentRowSpace": 10,
                               "type": "TEXT_WIDGET",
                               "hideCard": false,
@@ -475,8 +418,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 45,
-                              "bottomRow": 55,
+                              "topRow": 48,
+                              "bottomRow": 58,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -517,10 +460,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "responsiveBehavior": "fill",
-                              "originalTopRow": 45,
+                              "originalTopRow": 48,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "originalBottomRow": 55,
+                              "originalBottomRow": 58,
                               "iconAlign": "left",
                               "defaultText": "",
                               "minDynamicHeight": 4
@@ -536,8 +479,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 36,
-                              "bottomRow": 43,
+                              "topRow": 41,
+                              "bottomRow": 48,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "autoFocus": false,
@@ -547,7 +490,7 @@
                               "parentColumnSpace": 4.8802642822265625,
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
-                              "leftColumn": 44,
+                              "leftColumn": 45,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "accentColor"
@@ -564,7 +507,7 @@
                               "labelTextSize": "0.875rem",
                               "isRequired": false,
                               "isDeprecated": false,
-                              "rightColumn": 61,
+                              "rightColumn": 62,
                               "dynamicHeight": "FIXED",
                               "widgetId": "g9erlnx08f",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -650,8 +593,8 @@
                               "searchTags": [
                                 "dropdown"
                               ],
-                              "topRow": 22,
-                              "bottomRow": 29,
+                              "topRow": 26,
+                              "bottomRow": 33,
                               "parentRowSpace": 10,
                               "labelWidth": 5,
                               "type": "SELECT_WIDGET",
@@ -660,7 +603,11 @@
                               "defaultOptionValue": "",
                               "animateLoading": true,
                               "parentColumnSpace": 17.92022705078125,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onOptionChange"
+                                }
+                              ],
                               "leftColumn": 1,
                               "dynamicBindingPathList": [
                                 {
@@ -668,23 +615,13 @@
                                 },
                                 {
                                   "key": "borderRadius"
+                                },
+                                {
+                                  "key": "options"
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": [
-                                {
-                                  "label": "Blue",
-                                  "value": "BLUE"
-                                },
-                                {
-                                  "label": "Green",
-                                  "value": "GREEN"
-                                },
-                                {
-                                  "label": "Red",
-                                  "value": "RED"
-                                }
-                              ],
+                              "options": "{{get_Menu_Items.data}}",
                               "placeholderText": "Select option",
                               "isDisabled": false,
                               "key": "0ccfyirbpk",
@@ -705,6 +642,7 @@
                               "responsiveBehavior": "fill",
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
+                              "onOptionChange": "{{get_Menu_Items.run(() => get_Menu_Items.run(), () => {})}}",
                               "minDynamicHeight": 4
                             }
                           ],
@@ -1041,7 +979,20 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Update_Menu_Item_get_Menu_Items",
+              "name": "get_Menu_Items",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "restaurant_name.text"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Update_Menu_Item",
