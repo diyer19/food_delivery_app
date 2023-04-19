@@ -1,1 +1,1 @@
-{{update_menu.data}}
+{{delete_restaurant_form.data}}
