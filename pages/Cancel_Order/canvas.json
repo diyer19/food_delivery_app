@@ -117,7 +117,7 @@
                               "resetFormOnClick": false,
                               "boxShadow": "none",
                               "widgetName": "order_cancel",
-                              "onClick": "{{cancel_order.run(() => cancel_order.run(), () => {})}}",
+                              "onClick": "{{cancel_order.run(() => get_orders.run(), () => {})}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
