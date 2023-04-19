@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1292,
+          "bottomRow": 1170,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -131,7 +131,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `Fliptune`))(menu_item_restaurant.options, menu_item_restaurant.serverSideFiltering) }}",
+                              "defaultOptionValue": "",
                               "animateLoading": true,
                               "parentColumnSpace": 5.6590576171875,
                               "dynamicTriggerPathList": [
@@ -149,13 +149,10 @@
                                 },
                                 {
                                   "key": "options"
-                                },
-                                {
-                                  "key": "defaultOptionValue"
                                 }
                               ],
                               "labelPosition": "Top",
-                              "options": "{{get_restaurants.data}}",
+                              "options": "{{restaurant_name.data}}",
                               "placeholderText": "Select option",
                               "isDisabled": false,
                               "key": "px65agpbbi",
@@ -989,6 +986,14 @@
               "jsonPathKeys": [
                 "restaurant_name.text"
               ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Update_Menu_Item_restaurant_name",
+              "name": "restaurant_name",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]
