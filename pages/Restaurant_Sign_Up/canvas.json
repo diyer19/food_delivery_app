@@ -532,7 +532,7 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "delivery_zip",
+                              "widgetName": "restaurant_zip",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                               "searchTags": [
