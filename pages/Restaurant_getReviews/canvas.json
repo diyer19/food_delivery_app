@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Restaurant_getOrders",
-    "slug": "restaurant-getorders",
+    "name": "Restaurant_getReviews",
+    "slug": "restaurant-getreviews",
     "layouts": [
       {
         "viewMode": false,
@@ -74,7 +74,7 @@
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
                       "borderColor": "#E0DEDE",
-                      "widgetName": "delete_restaurant_form",
+                      "widgetName": "review_form",
                       "isCanvas": true,
                       "displayName": "Form",
                       "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
@@ -175,7 +175,7 @@
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
                               "originalBottomRow": 27,
-                              "onOptionChange": "{{restaurant_name.run(() => get_orders.run(), () => {})}}",
+                              "onOptionChange": "{{restaurant_name.run(() => get_reviews.run(), () => {})}}",
                               "minDynamicHeight": 4
                             },
                             {
@@ -256,19 +256,13 @@
                                   "key": "tableData"
                                 },
                                 {
-                                  "key": "primaryColumns.order_id.computedValue"
+                                  "key": "primaryColumns.review.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.order_total.computedValue"
+                                  "key": "primaryColumns.score.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.time_delivered.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.time_picked_up.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.time_placed.computedValue"
+                                  "key": "primaryColumns.review_date.computedValue"
                                 }
                               ],
                               "needsHeightForContent": true,
@@ -306,18 +300,16 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "columnUpdatedAt": 1681934962058,
+                              "columnUpdatedAt": 1681936729611,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
                               "widgetName": "Table1",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "order_id",
-                                "order_total",
-                                "time_placed",
-                                "time_picked_up",
-                                "time_delivered"
+                                "review_date",
+                                "score",
+                                "review"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
@@ -333,43 +325,19 @@
                               "dynamicTriggerPathList": [],
                               "borderWidth": "1",
                               "primaryColumns": {
-                                "order_id": {
-                                  "allowCellWrapping": false,
-                                  "index": 0,
-                                  "width": 150,
-                                  "originalId": "order_id",
-                                  "id": "order_id",
-                                  "alias": "order_id",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "number",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "Order ID",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"order_id\"]))}}",
-                                  "sticky": "",
-                                  "validation": {}
-                                },
-                                "order_total": {
+                                "review": {
                                   "allowCellWrapping": false,
                                   "index": 1,
                                   "width": 150,
-                                  "originalId": "order_total",
-                                  "id": "order_total",
-                                  "alias": "order_total",
+                                  "originalId": "review",
+                                  "id": "review",
+                                  "alias": "review",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "number",
+                                  "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -378,24 +346,27 @@
                                   "isEditable": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "Total",
+                                  "label": "Review",
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
-                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"order_total\"]))}}",
+                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"review\"]))}}",
                                   "sticky": "",
-                                  "validation": {}
+                                  "validation": {},
+                                  "cellBackground": ""
                                 },
-                                "time_delivered": {
+                                "score": {
                                   "allowCellWrapping": false,
                                   "index": 2,
                                   "width": 150,
-                                  "originalId": "time_delivered",
-                                  "id": "time_delivered",
-                                  "alias": "time_delivered",
+                                  "originalId": "score",
+                                  "id": "score",
+                                  "alias": "score",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "text",
+                                  "columnType": "number",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -404,24 +375,27 @@
                                   "isEditable": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "Time Delivered",
+                                  "label": "Score",
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
-                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"time_delivered\"]))}}",
+                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"score\"]))}}",
                                   "sticky": "",
-                                  "validation": {}
+                                  "validation": {},
+                                  "cellBackground": ""
                                 },
-                                "time_picked_up": {
+                                "review_date": {
                                   "allowCellWrapping": false,
-                                  "index": 3,
+                                  "index": 1,
                                   "width": 150,
-                                  "originalId": "time_picked_up",
-                                  "id": "time_picked_up",
-                                  "alias": "time_picked_up",
+                                  "originalId": "review_date",
+                                  "id": "review_date",
+                                  "alias": "review_date",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -430,38 +404,13 @@
                                   "isEditable": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "Time Picked Up",
+                                  "label": "Review Date",
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
-                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"time_picked_up\"]))}}",
+                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"review_date\"]))}}",
                                   "sticky": "",
-                                  "validation": {}
-                                },
-                                "time_placed": {
-                                  "allowCellWrapping": false,
-                                  "index": 4,
-                                  "width": 150,
-                                  "originalId": "time_placed",
-                                  "id": "time_placed",
-                                  "alias": "time_placed",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "Time Placed",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"time_placed\"]))}}",
-                                  "sticky": "",
-                                  "validation": {}
+                                  "validation": {},
+                                  "cellBackground": ""
                                 }
                               },
                               "key": "u4c91u48yq",
@@ -471,7 +420,7 @@
                               "textSize": "0.875rem",
                               "widgetId": "k8dlkq0oig",
                               "minWidth": 450,
-                              "tableData": "{{get_orders.data}}",
+                              "tableData": "{{get_reviews.data}}",
                               "label": "Data",
                               "searchKey": "",
                               "parentId": "cclxj1lftw",
@@ -819,8 +768,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Restaurant_getOrders_get_orders",
-              "name": "get_orders",
+              "id": "Restaurant_getReviews_get_reviews",
+              "name": "get_reviews",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
@@ -829,7 +778,7 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Restaurant_getOrders_restaurant_name",
+              "id": "Restaurant_getReviews_restaurant_name",
               "name": "restaurant_name",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -840,7 +789,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Restaurant_getOrders",
+        "id": "Restaurant_getReviews",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -851,5 +800,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "643b45882c9c4e3b78589afb_644047e475a6cb6b70d253f1"
+  "gitSyncId": "643b45882c9c4e3b78589afb_64404a3f75a6cb6b70d25405"
 }

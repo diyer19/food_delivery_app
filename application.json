@@ -31,6 +31,10 @@
     {
       "id": "Restaurant_getOrders",
       "isDefault": false
+    },
+    {
+      "id": "Restaurant_getReviews",
+      "isDefault": false
     }
   ],
   "viewMode": false,
