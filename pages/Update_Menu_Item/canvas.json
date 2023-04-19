@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1170,
+          "bottomRow": 1292,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -603,6 +603,9 @@
                               "dynamicTriggerPathList": [
                                 {
                                   "key": "onOptionChange"
+                                },
+                                {
+                                  "key": "onDropdownOpen"
                                 }
                               ],
                               "leftColumn": 1,
@@ -633,6 +636,7 @@
                               "isVisible": true,
                               "version": 1,
                               "parentId": "cclxj1lftw",
+                              "onDropdownOpen": "{{get_Menu_Items.run(() => get_Menu_Items.run(), () => {})}}",
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
                               "isLoading": false,
@@ -984,7 +988,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "restaurant_name.text"
+                "menu_item_restaurant.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             },
