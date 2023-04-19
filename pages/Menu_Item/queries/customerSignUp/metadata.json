@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{sign_Up.data}}",
+      "body": "{{new_menu_item.data}}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -52,7 +52,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "sign_Up.data"
+      "new_menu_item.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
