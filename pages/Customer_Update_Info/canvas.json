@@ -2199,7 +2199,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "columnUpdatedAt": 1681778055695,
+                              "columnUpdatedAt": 1681958499531,
                               "originalBottomRow": 123,
                               "primaryColumnId": "customer_id",
                               "defaultSelectedRowIndices": [
@@ -2217,9 +2217,9 @@
                                 "cvv",
                                 "expiration",
                                 "payment_id",
+                                "billing_street_address",
                                 "billing_city",
                                 "billing_state",
-                                "billing_street_address",
                                 "billing_zip",
                                 "delivery_city",
                                 "delivery_state",
