@@ -118,7 +118,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "post_customer",
-                              "onClick": "{{customerSignUp.run(() => customerSignUp.run(), () => {})}}",
+                              "onClick": "{{customerSignUp.run(() => {}, () => {})}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
