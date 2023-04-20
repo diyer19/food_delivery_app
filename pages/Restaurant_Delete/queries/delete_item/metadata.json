@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "update_menu_item",
+    "name": "delete_item",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -59,7 +59,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Restaurant_Delete_update_menu_item",
+  "id": "Restaurant_Delete_delete_item",
   "deleted": false,
   "gitSyncId": "643b45882c9c4e3b78589afb_6440424275a6cb6b70d253e9"
 }

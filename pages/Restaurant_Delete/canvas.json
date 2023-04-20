@@ -104,7 +104,7 @@
                           "widgetName": "Canvas2",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 230,
+                          "bottomRow": 240,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -137,6 +137,9 @@
                               "dynamicTriggerPathList": [
                                 {
                                   "key": "onOptionChange"
+                                },
+                                {
+                                  "key": "onDropdownOpen"
                                 }
                               ],
                               "leftColumn": 1,
@@ -167,6 +170,7 @@
                               "isVisible": true,
                               "version": 1,
                               "parentId": "cclxj1lftw",
+                              "onDropdownOpen": "{{restaurant_name.run()}}",
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
                               "isLoading": false,
@@ -182,7 +186,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "delete_restaurant",
-                              "onClick": "{{update_menu_item.run(() => update_menu_item.run(), () => {})}}",
+                              "onClick": "{{delete_item.run(() => delete_item.run(), () => {})}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "displayName": "Button",
                               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
