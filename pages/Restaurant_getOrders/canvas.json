@@ -938,33 +938,11 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Restaurant_getOrders_get_orders",
-              "name": "get_orders",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "restaurant_name2.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Restaurant_getOrders_restaurant_name",
               "name": "restaurant_name",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Restaurant_getOrders_get_total_earnings",
-              "name": "get_total_earnings",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "restaurant_name2.selectedOptionValue"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]

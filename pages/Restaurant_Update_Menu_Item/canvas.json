@@ -979,16 +979,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Restaurant_Update_Menu_Item_get_Menu_Items",
-              "name": "get_Menu_Items",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "restaurant_name1.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Restaurant_Update_Menu_Item_restaurant_name",
               "name": "restaurant_name",
               "confirmBeforeExecute": false,

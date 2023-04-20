@@ -885,33 +885,11 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Restaurant_getReviews_get_reviews",
-              "name": "get_reviews",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "restaurant_name2.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Restaurant_getReviews_restaurant_name",
               "name": "restaurant_name",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Restaurant_getReviews_get_avg_score",
-              "name": "get_avg_score",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "restaurant_name2.selectedOptionValue"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]

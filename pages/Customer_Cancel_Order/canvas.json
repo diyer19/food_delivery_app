@@ -956,30 +956,7 @@
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Customer_Cancel_Order_get_order_id",
-              "name": "get_order_id",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "customer_phone.text"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Customer_Cancel_Order_get_orders",
-              "name": "get_orders",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "customer_phone.text"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Customer_Cancel_Order",

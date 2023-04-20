@@ -183,7 +183,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `Fliptune`))(Order_restaurant.options, Order_restaurant.serverSideFiltering) }}",
+                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( get_restaurants.data[0].value))(Order_restaurant.options, Order_restaurant.serverSideFiltering) }}",
                               "animateLoading": true,
                               "parentColumnSpace": 5.6590576171875,
                               "dynamicTriggerPathList": [
@@ -469,7 +469,7 @@
                               "responsiveBehavior": "fill",
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "maxDynamicHeight": 9000,
-                              "onOptionChange": "{{get_price.run(() => get_price.run(), () => {})}}",
+                              "onOptionChange": "{{get_price.run(() => {}, () => {})}}",
                               "minDynamicHeight": 4
                             },
                             {
@@ -609,33 +609,11 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Customer_Place_Order_get_menu_items",
-              "name": "get_menu_items",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "Order_restaurant.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Customer_Place_Order_get_restaurants",
               "name": "get_restaurants",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Customer_Place_Order_get_price",
-              "name": "get_price",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "menu_items1.selectedOptionValue"
-              ],
               "timeoutInMillisecond": 10000
             }
           ]

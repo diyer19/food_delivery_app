@@ -104,7 +104,7 @@
                           "widgetName": "Canvas2",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 1050,
+                          "bottomRow": 1060,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -136,7 +136,7 @@
                                   "key": "onClick"
                                 }
                               ],
-                              "leftColumn": 15,
+                              "leftColumn": 17,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "buttonColor"
@@ -149,7 +149,7 @@
                               "isDisabled": false,
                               "key": "76d8065let",
                               "isDeprecated": false,
-                              "rightColumn": 44,
+                              "rightColumn": 46,
                               "isDefaultClickDisabled": true,
                               "widgetId": "tb1cbw4y9x",
                               "minWidth": 120,
